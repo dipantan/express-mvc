@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js") 
+        title Welcome #{user.username}
+    body 
+        div(class="container")
+            //- create a bootstrap 5 navbar 
+            nav(class="navbar navbar-expand-lg navbar-light bg-light")
+                a(class="navbar-brand" href="/") Home
+                button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+                    span(class="navbar-toggler-icon")
+                div(class="collapse navbar-collapse" id="navbarNav")
+                    ul(class="navbar-nav")
+                        li(class="nav-item")
+                            a(class="nav-link" href="/users") Users
+                        li(class="nav-item")
+                            a(class="nav-link" href="/users/new") New User
+                        li(class="nav-item")
+                            a(class="nav-link" href="/users/login") Login
+                        li(class="nav-item")
+                            a(class="nav-link" href="/logout") Logout
+            //- create a bootstrap 5 jumbotron
+            div(class="jumbotron")
+                h1(class="display-4") Welcome #{user.username}
+                p(class="lead") This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+                hr(class="my-4")
+            //- create a bootstrap 5 card
+            div(class="card" style="width: 18rem;")
+                img(src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" class="card-img-top" alt="...")
+                div(class="card-body")
+                    h5(class="card-title") Card title
+                    p(class="card-text") Some quick example text to build on the card title and make up the bulk of the card's content.
+                    a(href="#" class="btn btn-primary") Go somewhere

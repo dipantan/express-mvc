@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Login
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" type="text/css" href="/css/style.css")
+    body
+        div(class="container")
+            form(action="/login" method="post" class="card p-4" autocomplete="off")
+                h3(class="text-center") Login
+                div(class="form-floating mb-3")
+                    input(type="text" class="form-control shadow-none border-top-0 border-start-0 border-end-0 rounded-0" id="username" placeholder="username")
+                    label(for="username") Username:               
+                div(class="form-floating mb-3")
+                    input(type="password" class="form-control shadow-none border-top-0 border-start-0 border-end-0 rounded-0" id="password" placeholder="password")
+                    label(for="password") Password:
+                input(type="submit" class="btn btn-primary mt-3" value="Submit")
+                span(id="error" class="text-danger text-center mt-3")
+                div(class="text-center mt-3")
+                    p Don't have an account? 
+                    a(href="/register") Register
+
+    script(src="/js/login.js") 
+
+
